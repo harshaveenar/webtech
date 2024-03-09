@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Validation</title>
+    <script>
+        function validateEmail(email) {
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        }
+        function validateForm() {
+            const isValid = validateEmail(document.getElementById("email").value);
+            alert(isValid ? "Email is valid!" : "Invalid email format!");
+            return isValid;
+        }
+    </script>
+</head>
+<body>
+    <h1>Email Validation</h1>
+    <form onsubmit="return validateForm()">
+        <label for="email">Enter your email:</label>
+        <input type="text" id="email" name="email" required>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Client Counter</title>
+</head>
+<body>
+    <% 
+        // Initialize client count variable
+        int clientCount = 0;
+        
+        // Retrieve client count from application scope
+        Object countObj = application.getAttribute("clientCount");
+        if (countObj != null) {
+            clientCount = (int) countObj;
+        }
+        
+        // Increment client count
+        clientCount++;
+        
+        // Set updated client count to application scope
+        application.setAttribute("clientCount", clientCount);
+    %>
+    
+    <h1>Welcome to Our Website</h1>
+    <p>This website has been viewed by <%= clientCount %> clients.</p>
+</body>
+</html>

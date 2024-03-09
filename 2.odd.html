@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nearest Odd Number Finder</title>
+    <script>
+        function findNearestOdd(number) {
+            if (number % 2 === 0) {
+                return number - 1; // If even, return the nearest smaller odd number
+            } else {
+                return number; // If odd, return the number itself
+            }
+        }
+
+        function displayNearestOdd() {
+            var input = prompt("Enter a number:");
+            var number = parseInt(input);
+
+            if (!isNaN(number)) {
+                var nearestOdd = findNearestOdd(number);
+                alert("The nearest odd number to " + number + " is: " + nearestOdd);
+            } else {
+                alert("Invalid input.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Nearest Odd Number Finder</h1>
+    <p>This gices odd no</p>
+    <button onclick="displayNearestOdd()">Find Nearest Odd</button>
+</body>
+</html>

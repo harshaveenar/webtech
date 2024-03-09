@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Functions</title>
+    <script>
+        // Function to calculate the exponential value
+        function calculateExponential(base, exponent) {
+            return Math.pow(base, exponent);
+        }
+
+        // Function to limit the number of digits after the decimal value
+        function limitDecimal(number, digits) {
+            return parseFloat(number.toFixed(digits));
+        }
+
+        // Function to convert a number to a string
+        function numberToString(number) {
+            return number.toString();
+        }
+
+        // Function to return negative infinity
+        function negativeInfinity() {
+            return Number.NEGATIVE_INFINITY;
+        }
+
+        // Example usage of the functions
+        document.addEventListener("DOMContentLoaded", function() {
+            var base = 2;
+            var exponent = 3;
+            var result1 = calculateExponential(base, exponent);
+            console.log("Exponential value of " + base + " raised to the power of " + exponent + ": " + result1);
+
+            var number = 3.14159265;
+            var digits = 2;
+            var result2 = limitDecimal(number, digits);
+            console.log("Limiting " + number + " to " + digits + " digits after the decimal point: " + result2);
+
+            var num = 123;
+            var result3 = numberToString(num);
+            console.log("Converting " + num + " to string: " + result3);
+
+            var result4 = negativeInfinity();
+            console.log("Negative Infinity: " + result4);
+        });
+    </script>
+</head>
+<body>
+    <h1>JavaScript Functions</h1>
+    <p>Check the console for results.</p>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Web Page</title>
+    <style>
+        /* CSS for the animated effects */
+        @keyframes slideInFromLeft {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        .animated-element {
+            animation: slideInFromLeft 1s ease-out; /* Apply animation */
+            transition: background-color 0.3s ease-out; /* Apply transition */
+            width: 200px;
+            height: 100px;
+            background-color: #3498db;
+            color: white;
+            text-align: center;
+            line-height: 100px;
+            cursor: pointer;
+        }
+
+        .animated-element:hover {
+            background-color: #2980b9; /* Change color on hover */
+        }
+    </style>
+</head>
+<body>
+    <!-- HTML element with animated effects -->
+    <div class="animated-element">Hover Me</div>
+</body>
+</html>

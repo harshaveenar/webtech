@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absolute Positioning Example</title>
+    <style>
+        .container {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+        }
+
+        .box1, .box2 {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: rgba(255, 0, 0, 0.5); /* Red with 50% opacity */
+        }
+
+        .box1 {
+            top: 50px;
+            left: 50px;
+        }
+
+        .box2 {
+            top: 70px;
+            left: 70px;
+            background-color: rgba(0, 0, 255, 0.5); /* Blue with 50% opacity */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1">Box 1</div>
+        <div class="box2">Box 2</div>
+    </div>
+</body>
+</html>

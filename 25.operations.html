@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>String Methods</title>
+</head>
+<body>
+  <h1>String Methods Example</h1>
+  
+  <script>
+    var str = "saveetha, World!";
+    document.write("<p>Character at index 7: " + str.charAt(7) + "</p>");
+    document.write("<p>Unicode of character at index 7: " + str.charCodeAt(7) + "</p>");
+    document.write("<p>Joined string: " + "saveetha".concat(", ", "World") + "</p>");
+    document.write("<p>String from Unicode: " + String.fromCharCode(72, 101, 108, 108, 111) + "</p>");
+    document.write("<p>Uppercase string: " + str.toUpperCase() + "</p>");
+  </script>
+</body>
+</html>
